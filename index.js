@@ -72,7 +72,7 @@
 
   // Create scenes.
   var scenes = data.scenes.map(function(data) {
-    var urlPrefix = "http://localhost:8080/marzipano/";
+    var urlPrefix = "http://fazanadiproject.github.io/";
     var source = Marzipano.ImageUrlSource.fromString(
       urlPrefix + data.id + ".jpg");
     var geometry = new Marzipano.EquirectGeometry(data.levels);
