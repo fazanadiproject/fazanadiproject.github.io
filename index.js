@@ -15,6 +15,9 @@
  */
 'use strict';
 
+var scene;
+var scene1;
+
 (function() {
   var Marzipano = window.Marzipano;
   var bowser = window.bowser;
@@ -74,18 +77,22 @@
   var scenes = data.scenes.map(function(data) {
     var urlPrefix = "http://fazanadiproject.github.io/";
     var source = Marzipano.ImageUrlSource.fromString(
-      urlPrefix + data.id + ".jpg");
-    var geometry = new Marzipano.EquirectGeometry(data.levels);
+      urlPrefix + "/" + data.id + "/{z}/{f}/{y}/{x}.jpg",
+      { cubeMapPreviewUrl: urlPrefix + "/" + data.id + "/preview.jpg" });
+    var geometry = new Marzipano.CubeGeometry(data.levels);
 
     var limiter = Marzipano.RectilinearView.limit.traditional(data.faceSize, 100*Math.PI/180, 120*Math.PI/180);
     var view = new Marzipano.RectilinearView(data.initialViewParameters, limiter);
 
-    var scene = viewer.createScene({
+    scene = viewer.createScene({
       source: source,
       geometry: geometry,
       view: view,
       pinFirstLevel: true
     });
+    if (typeof scene1 == 'undefined') {
+      scene1 = scene;
+    }
 
     // Create link hotspots.
     data.linkHotspots.forEach(function(hotspot) {
@@ -131,6 +138,7 @@
   sceneListToggleElement.addEventListener('click', toggleSceneList);
 
   // Start with the scene list open on desktop.
+    
   if (!document.body.classList.contains('mobile')) {
     showSceneList();
   }
@@ -387,5 +395,8 @@
 
   // Display the initial scene.
   switchScene(scenes[0]);
+  // console.log(scenes[0]);
 
 })();
+console.log(scene);
+console.log(scene1);

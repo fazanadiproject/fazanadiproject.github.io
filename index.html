@@ -7,21 +7,22 @@
 <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui" />
 <style> @-ms-viewport { width: device-width; } </style>
 <link rel="stylesheet" href="vendor/reset.min.css">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/tooltip.css">
 </head>
-<body class="multiple-scenes view-control-buttons">
+<body class="multiple-scenes ">
 
 <div id="pano"></div>
 
 <div id="sceneList">
   <ul class="scenes">
     
-      <a href="#" class="scene" data-id="0-hutan-tropis">
-        <li class="text">Hutan Tropis</li>
+      <a href="#" class="scene" data-id="0-nature_hdri_35_20150408_1586695207-1">
+        <li class="text">Ekosistem Laut Dangkal</li>
       </a>
     
-      <a href="#" class="scene" data-id="1-hutan-mangrove">
-        <li class="text">Hutan Mangrove</li>
+      <a href="#" class="scene" data-id="1-qun0v">
+        <li class="text">Ekosistem Hutan Hujan Tropis</li>
       </a>
     
   </ul>
@@ -31,6 +32,18 @@
   <h1 class="sceneName"></h1>
 </div>
 
+
+<div id="tooltip" class="tooltip">
+  <div class="out">
+    <div class="in">
+      <div class="image"></div>
+    </div>
+  </div>
+  <div class="tip">
+    <p>Info 17</p>
+    <img src="img/sources/17.jpg">
+  </div>
+</div>
 <a href="#" id="autorotateToggle">
   <img class="icon off" src="img/play.png">
   <img class="icon on" src="img/pause.png">
@@ -75,6 +88,7 @@
 
 <script src="data.js"></script>
 <script src="index.js"></script>
+<script src="js/tooltip.js"></script>
 
 </body>
 </html>
