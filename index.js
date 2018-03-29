@@ -119,6 +119,7 @@ var scene1;
     targetPitch: 0,
     targetFov: Math.PI/2
   });
+  data.settings.autorotateEnabled = 0;
   if (data.settings.autorotateEnabled) {
     autorotateToggleElement.classList.add('enabled');
   }
@@ -398,5 +399,3 @@ var scene1;
   // console.log(scenes[0]);
 
 })();
-console.log(scene);
-console.log(scene1);
