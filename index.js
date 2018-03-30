@@ -76,7 +76,7 @@ var countHotspot = 0;
 
   // Create scenes.
   var scenes = data.scenes.map(function(data) {
-    var urlPrefix = "https://fazanadi.github.io/tiles";
+    var urlPrefix = "https://fazanadiproject.github.io/tiles";
     var source = Marzipano.ImageUrlSource.fromString(
       urlPrefix + "/" + data.id + "/{z}/{f}/{y}/{x}.jpg",
       { cubeMapPreviewUrl: urlPrefix + "/" + data.id + "/preview.jpg" });
