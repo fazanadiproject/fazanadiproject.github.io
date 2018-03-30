@@ -434,7 +434,7 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
 
 .info-hotspot {
   line-height: 1.2em;
-  opacity: 0.9;
+  opacity: 0.65;
   -webkit-transition: opacity 0.2s 0.2s;
   transition: opacity 0.2s 0.2s;
 }

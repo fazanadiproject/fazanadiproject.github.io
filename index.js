@@ -17,6 +17,7 @@
 
 var scene;
 var scene1;
+var countHotspot = 0;
 
 (function() {
   var Marzipano = window.Marzipano;
@@ -75,7 +76,7 @@ var scene1;
 
   // Create scenes.
   var scenes = data.scenes.map(function(data) {
-    var urlPrefix = "https://fazanadiproject.github.io/tiles";
+    var urlPrefix = "https://fazanadi.github.io/tiles";
     var source = Marzipano.ImageUrlSource.fromString(
       urlPrefix + "/" + data.id + "/{z}/{f}/{y}/{x}.jpg",
       { cubeMapPreviewUrl: urlPrefix + "/" + data.id + "/preview.jpg" });
@@ -101,6 +102,7 @@ var scene1;
     });
 
     // Create info hotspots.
+    countHotspot = 0;
     data.infoHotspots.forEach(function(hotspot) {
       var element = createInfoHotspotElement(hotspot);
       scene.hotspotContainer().createHotspot(element, { yaw: hotspot.yaw, pitch: hotspot.pitch });
@@ -253,7 +255,6 @@ var scene1;
   }
 
   function createLinkHotspotElement(hotspot) {
-
     // Create wrapper element to hold icon and tooltip.
     var wrapper = document.createElement('div');
     wrapper.classList.add('hotspot');
@@ -293,7 +294,11 @@ var scene1;
   }
 
   function createInfoHotspotElement(hotspot) {
-
+    if (countHotspot == 20) {
+      countHotspot = 0;
+    } else {
+      countHotspot++;
+    }
     // Create wrapper element to hold icon and tooltip.
     var wrapper = document.createElement('div');
     wrapper.classList.add('hotspot');
@@ -307,7 +312,11 @@ var scene1;
     var iconWrapper = document.createElement('div');
     iconWrapper.classList.add('info-hotspot-icon-wrapper');
     var icon = document.createElement('img');
-    icon.src = 'img/info.png';
+    if (countHotspot == 0) {
+      icon.src = 'img/info/info.png';
+    } else {
+      icon.src = 'img/info/info' + countHotspot + '.png';
+    }
     icon.classList.add('info-hotspot-icon');
     iconWrapper.appendChild(icon);
 
