@@ -18,6 +18,7 @@
 var scene;
 var scene1;
 var countHotspot = 0;
+var countHScene = 0;
 
 (function() {
   var Marzipano = window.Marzipano;
@@ -294,8 +295,9 @@ var countHotspot = 0;
   }
 
   function createInfoHotspotElement(hotspot) {
-    if (countHotspot == 20) {
+    if (countHotspot == 20 || (countHScene == 1 && countHotspot == 6)) {
       countHotspot = 0;
+      countHScene++;
     } else {
       countHotspot++;
     }

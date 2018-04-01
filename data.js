@@ -24,7 +24,14 @@ var APP_DATA = {
         "pitch": 0.015273042474813536,
         "fov": 1.290060274579411
       },
-      "linkHotspots": [],
+      "linkHotspots": [
+        {
+          "yaw": 2.807640796958477,
+          "pitch": -0.18213590085085585,
+          "rotation": 0,
+          "target": "1-qun0v"
+        }
+      ],
       "infoHotspots": [
         {
           "yaw": -1.7380436921091693,
@@ -150,7 +157,7 @@ var APP_DATA = {
           "yaw": 2.8495099975593376,
           "pitch": -1.2992046900413303,
           "title": "Background resource",
-          "text": "Retrieved from and all copyright to <a href='https://www.360cities.net/image/boat-diving'>https://www.360cities.net/image/boat-diving</a>"
+          "text": "Retrieved from and all copyright to <a href='https://www.360cities.net/image/boat-diving'>https://www.360cities.net/image/boat-diving</a><br>Credit to : Remo Pinana as photographer"
         }
       ]
     },
@@ -178,8 +185,58 @@ var APP_DATA = {
         "yaw": 0,
         "fov": 1.5707963267948966
       },
-      "linkHotspots": [],
-      "infoHotspots": []
+      "linkHotspots": [
+        {
+          "yaw": 0.9175550226006379,
+          "pitch": 0.06045296329757477,
+          "rotation": 0,
+          "target": "0-nature_hdri_35_20150408_1586695207-1"
+        }
+      ],
+      "infoHotspots": [
+        {
+          "yaw": -0.7241224866428642,
+          "pitch": -0.1231711844296619,
+          "title": "Info 1",
+          "text": "<center><img class='myImg' src='https://fazanadiproject.github.io/img/sources/hutan/1.jpg' class='img-responsive' width='100%' style='margin : 0; padding : 0;'></img></center>"
+        },
+        {
+          "yaw": -2.3822598340031647,
+          "pitch": -0.8909538361761386,
+          "title": "Info 2",
+          "text": "<center><img class='myImg' src='https://fazanadiproject.github.io/img/sources/hutan/2.jpg' class='img-responsive' width='100%' style='margin : 0; padding : 0;'></img></center>"
+        },
+        {
+          "yaw": 0.7557953838575777,
+          "pitch": 0.20324595984868957,
+          "title": "Info 3",
+          "text": "<center><img class='myImg' src='https://fazanadiproject.github.io/img/sources/hutan/3.jpg' class='img-responsive' width='100%' style='margin : 0; padding : 0;'></img></center>"
+        },
+        {
+          "yaw": -0.5552617977273187,
+          "pitch": 0.09975246948306626,
+          "title": "Info 4",
+          "text": "<center><img class='myImg' src='https://fazanadiproject.github.io/img/sources/hutan/4.jpg' class='img-responsive' width='100%' style='margin : 0; padding : 0;'></img></center>"
+        },
+        {
+          "yaw": -2.1,
+          "pitch": -0.9294416796317104,
+          "title": "Info 5",
+          "text": "<center><img class='myImg' src='https://fazanadiproject.github.io/img/sources/hutan/5.jpg' class='img-responsive' width='100%' style='margin : 0; padding : 0;'></img></center>"
+        },
+        {
+          "yaw": 0.3128760277053398,
+          "pitch": 0.4557029059420906,
+          "title": "Info 6",
+          "text": "<center><img class='myImg' src='https://fazanadiproject.github.io/img/sources/hutan/6.jpg' class='img-responsive' width='100%' style='margin : 0; padding : 0;'></img></center>"
+        },
+        {
+          "yaw": -0.537886421458213,
+          "pitch": 1.792398441505523,
+          "title": "Background resource",
+          "text": "Retrieved from and all copyright to <a href='https://www.360cities.net/image/laos-hin-namno-national-park-forest-asia'>https://www.360cities.net/image/laos-hin-namno-national-park-forest-asia</a><br>Credit to : Julien Mordret as photographer"
+        }
+      ]
     }
   ],
   "name": "Project Title",
